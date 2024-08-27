@@ -1,0 +1,31 @@
+!--------------------------
+!The Triathlon Problem
+!--------------------------
+program Triathlon
+  IMPLICIT NONE
+  REAL:: cyclehours !num of hours cycled (205 calories/hr) 
+  REAL:: runninghours !num of hours ran (455 calories/hr)
+  REAL:: swimminghours !num of hours swam (295 calories/hr)
+  REAL:: calsburned !number of calories burned 
+  REAL:: weight !weight in pounds 
+
+  print *, 'Enter the amount of hours cycled: '
+  read *, cyclehours
+
+  print *, 'Enter the amount of hours ran: '
+  read *, runninghours 
+
+  print *, 'Enter the amount of hours swam: '
+  read *, swimminghours 
+
+  print *, 'Cycle Hours: ', cyclehours
+  print *, 'Run Hours: ', runninghours
+  print *, 'Swim Hours: ', swimminghours
+
+  calsburned = (cyclehours * 205) + (runninghours * 455) + (swimminghours * 295)
+  print *, 'Calories Burned: ', calsburned
+
+  weight = calsburned / 3805
+  print *, 'Pounds worked off', weight
+
+end program Triathlon
